@@ -23,6 +23,8 @@ class AccountAchievements(BaseAPIv2Object):
 class AccountBank(BaseAPIv2Object):
     pass
 
+class AccountDailyCrafting(BaseAPIv2Object):
+    pass
 
 class AccountDungeons(BaseAPIv2Object):
     pass
@@ -52,7 +54,15 @@ class AccountInventory(BaseAPIv2Object):
     pass
 
 
+class AccountLuck(BaseAPIv2Object):
+    pass
+
+
 class AccountMailCarriers(BaseAPIv2Object):
+    pass
+
+
+class AccountMapChests(BaseAPIv2Object):
     pass
 
 
@@ -69,6 +79,18 @@ class AccountMaterials(BaseAPIv2Object):
 
 
 class AccountMinis(BaseAPIv2Object):
+    pass
+
+
+class AccountMountsSkins(BaseAPIv2Object):
+    pass
+
+
+class AccountMountsTypes(BaseAPIv2Object):
+    pass
+
+
+class AccountNovelties(BaseAPIv2Object):
     pass
 
 
@@ -97,6 +119,10 @@ class AccountTitles(BaseAPIv2Object):
 
 
 class AccountWallet(BaseAPIv2Object):
+    pass
+
+
+class AccountWorldbosses(BaseAPIv2Object):
     pass
 
 
@@ -655,6 +681,7 @@ class WvwUpgrades(BaseAPIv2Object):
 API_OBJECTS = [Account('account'),
                AccountAchievements('account/achievements'),
                AccountBank('account/bank'),
+               AccountDailyCrafting('account/dailycrafting'),
                AccountDungeons('account/dungeons'),
                AccountDyes('account/dyes'),
                AccountFinishers('account/finishers'),
@@ -662,11 +689,16 @@ API_OBJECTS = [Account('account'),
                AccountHomeCats('account/home/cats'),
                AccountHomeNodes('account/home/nodes'),
                AccountInventory('account/inventory'),
+               AccountLuck('account/luck'),
                AccountMailCarriers('account/mailcarriers'),
+               AccountMapChests('account/mapchests'),
                AccountMasteries('account/masteries'),
                AccountMasteryPoints('account/mastery/points'),
                AccountMaterials('account/materials'),
                AccountMinis('account/minis'),
+               AccountMountsSkins('account/mounts/skins'),
+               AccountMountsTypes('account/mounts/types'),
+               AccountNovelties('account/novelties'),
                AccountOutfits('account/outfits'),
                AccountPvPHeroes('account/pvp/heroes'),
                AccountRaids('account/raids'),
@@ -674,6 +706,7 @@ API_OBJECTS = [Account('account'),
                AccountSkins('account/skins'),
                AccountTitles('account/titles'),
                AccountWallet('account/wallet'),
+               AccountWorldbosses('account/worldbosses'),
                Achievements('achievements'),
                AchievementsCategories('achievements/categories'),
                AchievementsDaily('achievements/daily'),
