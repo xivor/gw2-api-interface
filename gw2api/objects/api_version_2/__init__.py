@@ -166,6 +166,114 @@ class Characters(BaseAPIv2Object):
     pass
 
 
+class CharactersIdBackstory(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdCore(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdCrafting(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdEquipment(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdHeropoints(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdInventory(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdQuests(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdRecipes(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdSab(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdSkills(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdSpecializations(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class CharactersIdTraining(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
 class Colors(BaseAPIv2Object):
     pass
 
@@ -393,7 +501,15 @@ class Dungeons(BaseAPIv2Object):
     pass
 
 
-class Emblem(BaseAPIv2Object):
+class EmblemBackgrounds(BaseAPIv2Object):
+    pass
+
+
+class EmblemForegrounds(BaseAPIv2Object):
+    pass
+
+
+class Emotes(BaseAPIv2Object):
     pass
 
 
@@ -446,6 +562,15 @@ class GuildIdRanks(BaseAPIv2Object):
 
 
 class GuildIdStash(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
+
+class GuildIdStorage(BaseAPIv2Object):
 
     def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
@@ -514,6 +639,11 @@ class MailCarriers(BaseAPIv2Object):
     pass
 
 
+class Mapchests(BaseAPIv2Object):
+
+    pass
+
+
 class Maps(BaseAPIv2Object):
     pass
 
@@ -527,6 +657,14 @@ class Materials(BaseAPIv2Object):
 
 
 class Minis(BaseAPIv2Object):
+    pass
+
+
+class MountsSkins(BaseAPIv2Object):
+    pass
+
+
+class MountsTypes(BaseAPIv2Object):
     pass
 
 
@@ -583,6 +721,10 @@ class PvPStats(BaseAPIv2Object):
 
 
 class Quaggans(BaseAPIv2Object):
+    pass
+
+
+class Quests(BaseAPIv2Object):
     pass
 
 
@@ -647,6 +789,10 @@ class Traits(BaseAPIv2Object):
 
 
 class Worlds(BaseAPIv2Object):
+    pass
+
+
+class Worldbosses(BaseAPIv2Object):
     pass
 
 
@@ -717,6 +863,18 @@ API_OBJECTS = [Account('account'),
                Build('build'),
                Cats('cats'),
                Characters('characters'),
+               CharactersIdBackstory('characters/:id/backstory'),
+               CharactersIdCore('characters/:id/core'),
+               CharactersIdCrafting('characters/:id/crafting'),
+               CharactersIdEquipment('characters/:id/equipment'),
+               CharactersIdHeropoints('characters/:id/heropoints'),
+               CharactersIdInventory('characters/:id/inventory'),
+               CharactersIdQuests('characters/:id/quests'),
+               CharactersIdRecipes('characters/:id/recipes'),
+               CharactersIdSab('characters/:id/sab'),
+               CharactersIdSkills('characters/:id/skills'),
+               CharactersIdSpecializations('characters/:id/specializations'),
+               CharactersIdTraining('characters/:id/training'),
                Colors('colors'),
                CommerceDelivery('commerce/delivery'),
                CommerceExchange('commerce/exchange'),
@@ -728,7 +886,9 @@ API_OBJECTS = [Account('account'),
                Continents('continents'),
                Currencies('currencies'),
                Dungeons('dungeons'),
-               Emblem('emblem'),
+               EmblemBackgrounds('emblem/backgrounds'),
+               EmblemForegrounds('emblem/foregrounds'),
+               Emotes('emotes'),
                Files('files'),
                Finishers('finishers'),
                Gliders('gliders'),
@@ -737,6 +897,7 @@ API_OBJECTS = [Account('account'),
                GuildIdMembers('guild/:id/members'),
                GuildIdRanks('guild/:id/ranks'),
                GuildIdStash('guild/:id/stash'),
+               GuildIdStorage('guild/:id/storage'),
                GuildIdTeams('guild/:id/teams'),
                GuildIdTreasury('guild/:id/treasury'),
                GuildIdUpgrades('guild/:id/upgrades'),
@@ -747,10 +908,13 @@ API_OBJECTS = [Account('account'),
                ItemStats('itemstats'),
                Legends('legends'),
                MailCarriers('mailcarriers'),
+               Mapchests('mapchests'),
                Maps('maps'),
                Masteries('masteries'),
                Materials('materials'),
                Minis('minis'),
+               MountsSkins('mounts/skins'),
+               MountsTypes('mounts/types'),
                Nodes('nodes'),
                Outfits('outfits'),
                Pets('pets'),
@@ -765,6 +929,7 @@ API_OBJECTS = [Account('account'),
                PvPStandings('pvp/standings'),
                PvPStats('pvp/stats'),
                Quaggans('quaggans'),
+               Quests('quests'),
                Races('races'),
                Raids('raids'),
                Recipes('recipes'),
@@ -778,6 +943,7 @@ API_OBJECTS = [Account('account'),
                Tokeninfo('tokeninfo'),
                Traits('traits'),
                Worlds('worlds'),
+               Worldbosses('worldbosses'),
                Wvw('wvw'),
                WvwAbilities('wvw/abilities'),
                WvwMatches('wvw/matches'),
