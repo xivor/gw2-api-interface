@@ -496,6 +496,8 @@ class Continents(BaseAPIv2Object):
 class Currencies(BaseAPIv2Object):
     pass
 
+class DailyCrafting(BaseAPIv2Object):
+    pass
 
 class Dungeons(BaseAPIv2Object):
     pass
@@ -669,6 +671,10 @@ class MountsTypes(BaseAPIv2Object):
 
 
 class Nodes(BaseAPIv2Object):
+    pass
+
+
+class Novelties(BaseAPIv2Object):
     pass
 
 
@@ -885,6 +891,7 @@ API_OBJECTS = [Account('account'),
                CommerceTransactions('commerce/transactions'),
                Continents('continents'),
                Currencies('currencies'),
+               DailyCrafting('dailycrafting'),
                Dungeons('dungeons'),
                EmblemBackgrounds('emblem/backgrounds'),
                EmblemForegrounds('emblem/foregrounds'),
@@ -916,6 +923,7 @@ API_OBJECTS = [Account('account'),
                MountsSkins('mounts/skins'),
                MountsTypes('mounts/types'),
                Nodes('nodes'),
+               Novelties('novelties'),
                Outfits('outfits'),
                Pets('pets'),
                Professions('professions'),
