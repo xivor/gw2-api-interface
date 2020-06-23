@@ -45,7 +45,7 @@ class GuildWars2Client:
         session.verify = self.verify_ssl
 
         session.headers.update({
-            'User-Agent': 'juxhindb-gw2-api-interface-python-wrapper',
+            'User-Agent': 'xivor-gw2-api-interface-python-wrapper',
             'Accept': 'application/json',
             'Accept-Language': GuildWars2Client.LANG
         })
