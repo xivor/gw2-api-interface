@@ -31,7 +31,6 @@ class AccountBuildStorage(BaseAPIv2Object):
 class AccountDailyCrafting(BaseAPIv2Object):
     pass
 
-
 class AccountDungeons(BaseAPIv2Object):
     pass
 
@@ -186,16 +185,24 @@ class Characters(BaseAPIv2Object):
 
 class CharactersIdBackstory(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
         return super().get(url=endpoint_url)
 
 
+class CharactersIdCore(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+    
 class CharactersIdBuildTabs(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -204,7 +211,7 @@ class CharactersIdBuildTabs(BaseAPIv2Object):
 
 class CharactersIdBuildTabsActive(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -213,7 +220,7 @@ class CharactersIdBuildTabsActive(BaseAPIv2Object):
 
 class CharactersIdCrafting(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -222,7 +229,7 @@ class CharactersIdCrafting(BaseAPIv2Object):
 
 class CharactersIdDungeons(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -231,16 +238,24 @@ class CharactersIdDungeons(BaseAPIv2Object):
 
 class CharactersIdEquipment(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
         return super().get(url=endpoint_url)
 
 
+class CharactersIdHeropoints(BaseAPIv2Object):
+
+    def get(self, id, **kwargs):
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+
+        return super().get(url=endpoint_url)
+
 class CharactersIdEquipmentTabs(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -249,7 +264,7 @@ class CharactersIdEquipmentTabs(BaseAPIv2Object):
 
 class CharactersIdEquipmentTabsActive(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -258,7 +273,7 @@ class CharactersIdEquipmentTabsActive(BaseAPIv2Object):
 
 class CharactersIdHeroPoints(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -267,7 +282,7 @@ class CharactersIdHeroPoints(BaseAPIv2Object):
 
 class CharactersIdInventory(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -276,7 +291,7 @@ class CharactersIdInventory(BaseAPIv2Object):
 
 class CharactersIdQuests(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -285,7 +300,7 @@ class CharactersIdQuests(BaseAPIv2Object):
 
 class CharactersIdRecipes(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -294,7 +309,7 @@ class CharactersIdRecipes(BaseAPIv2Object):
 
 class CharactersIdSAB(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -303,7 +318,7 @@ class CharactersIdSAB(BaseAPIv2Object):
 
 class CharactersIdSkills(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -312,7 +327,7 @@ class CharactersIdSkills(BaseAPIv2Object):
 
 class CharactersIdSpecializations(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -321,7 +336,7 @@ class CharactersIdSpecializations(BaseAPIv2Object):
 
 class CharactersIdTraining(BaseAPIv2Object):
 
-    def get(self, id):
+    def get(self, id, **kwargs):
         endpoint_url = self._build_endpoint_base_url()
         endpoint_url = endpoint_url.replace(':id', id)
 
@@ -579,6 +594,18 @@ class Emblem(BaseAPIv2Object):
     pass
 
 
+class EmblemBackgrounds(BaseAPIv2Object):
+    pass
+
+
+class EmblemForegrounds(BaseAPIv2Object):
+    pass
+
+
+class Emotes(BaseAPIv2Object):
+    pass
+
+
 class Files(BaseAPIv2Object):
     pass
 
@@ -721,6 +748,11 @@ class MailCarriers(BaseAPIv2Object):
     pass
 
 
+class Mapchests(BaseAPIv2Object):
+
+    pass
+
+
 class Maps(BaseAPIv2Object):
     pass
 
@@ -746,6 +778,10 @@ class MountsSkins(BaseAPIv2Object):
 
 
 class MountsTypes(BaseAPIv2Object):
+    pass
+
+
+class Nodes(BaseAPIv2Object):
     pass
 
 
@@ -794,6 +830,10 @@ class PvPRunes(BaseAPIv2Object):
 
 
 class PvPSeasons(BaseAPIv2Object):
+    pass
+
+
+class PvPSeasonsLeaderboards(BaseAPIv2Object):
     pass
 
 
@@ -896,11 +936,11 @@ class Vendors(BaseAPIv2Object):
     pass
 
 
-class WorldBosses(BaseAPIv2Object):
+class Worlds(BaseAPIv2Object):
     pass
 
 
-class Worlds(BaseAPIv2Object):
+class WorldBosses(BaseAPIv2Object):
     pass
 
 
@@ -921,6 +961,10 @@ class WvwMatchesOverview(BaseAPIv2Object):
 
 
 class WvwMatchesScores(BaseAPIv2Object):
+    pass
+
+
+class WvwMatchesStatsTeams(BaseAPIv2Object):
     pass
 
 
@@ -1022,6 +1066,7 @@ API_OBJECTS = [Account('account'),
                CharactersIdBackstory('characters/:id/backstory'),
                CharactersIdBuildTabs('characters/:id/buildtabs'),
                CharactersIdBuildTabsActive('characters/:id/buildtabs/active'),
+               CharactersIdCore('characters/:id/core'),
                CharactersIdCrafting('characters/:id/crafting'),
                CharactersIdDungeons('characters/:id/dungeons'),
                CharactersIdEquipment('characters/:id/equipment'),
@@ -1049,6 +1094,9 @@ API_OBJECTS = [Account('account'),
                DailyCrafting('dailycrafting'),
                Dungeons('dungeons'),
                Emblem('emblem'),
+               EmblemBackgrounds('emblem/backgrounds'),
+               EmblemForegrounds('emblem/foregrounds'),
+               Emotes('emotes'),
                Files('files'),
                Finishers('finishers'),
                GemstoreCatalog('gemstore/catalog'),
@@ -1072,6 +1120,7 @@ API_OBJECTS = [Account('account'),
                ItemStats('itemstats'),
                Legends('legends'),
                MailCarriers('mailcarriers'),
+               Mapchests('mapchests'),
                Maps('maps'),
                Masteries('masteries'),
                Materials('materials'),
@@ -1079,6 +1128,7 @@ API_OBJECTS = [Account('account'),
                Mounts('mounts'),
                MountsSkins('mounts/skins'),
                MountsTypes('mounts/types'),
+               Nodes('nodes'),
                Novelties('novelties'),
                Outfits('outfits'),
                Pets('pets'),
@@ -1091,6 +1141,7 @@ API_OBJECTS = [Account('account'),
                PvPRewardTracks('pvp/rewardtracks'),
                PvPRunes('pvp/runes'),
                PvPSeasons('pvp/seasons'),
+               PvPSeasonsLeaderboards('pvp/seasons/leaderboards'),
                PvPSeasonsIdLeaderboards('pvp/seasons/:id/leaderboards'),
                PvPSigils('pvp/sigils'),
                PvPStandings('pvp/standings'),
@@ -1112,6 +1163,7 @@ API_OBJECTS = [Account('account'),
                Vendors('vendors'),
                WorldBosses('worldbosses'),
                Worlds('worlds'),
+               WorldBosses('worldbosses'),
                Wvw('wvw'),
                WvwAbilities('wvw/abilities'),
                WvwMatches('wvw/matches'),
@@ -1119,6 +1171,7 @@ API_OBJECTS = [Account('account'),
                WvwMatchesScores('wvw/matches/scores'),
                WvwMatchesStats('wvw/matches/stats'),
                WvwMatchesStatsGuilds('wvw/matches/stats/:id/guilds/:guild_id'),
+               WvwMatchesStatsTeams('wvw/matches/stats/teams'),
                WvwMatchesStatsTeamsTopKDR('wvw/matches/stats/:id/teams/:team/top/kdr'),
                WvwMatchesStatsTeamsTopKills('wvw/matches/stats/:id/teams/:team/top/kills'),
                WvwObjectives('wvw/objectives'),
