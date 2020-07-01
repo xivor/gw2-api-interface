@@ -31,6 +31,7 @@ class AccountBuildStorage(BaseAPIv2Object):
 class AccountDailyCrafting(BaseAPIv2Object):
     pass
 
+
 class AccountDungeons(BaseAPIv2Object):
     pass
 
@@ -48,6 +49,10 @@ class AccountFinishers(BaseAPIv2Object):
 
 
 class AccountGliders(BaseAPIv2Object):
+    pass
+
+
+class AccountHome(BaseAPIv2Object):
     pass
 
 
@@ -161,6 +166,29 @@ class AchievementsDailyTomorrow(BaseAPIv2Object):
 
 class AchievementsGroups(BaseAPIv2Object):
     pass
+
+
+class Adventures(BaseAPIv2Object):
+    pass
+
+
+class AdventuresLeaderboards(BaseAPIv2Object):
+    pass
+
+
+class AdventuresIdLeaderboards(BaseAPIv2Object):
+    
+    def get(self, id, **kwargs):
+        board = kwargs.get('board')
+        region = kwargs.get('region')
+        endpoint_url = self._build_endpoint_base_url()
+        endpoint_url = endpoint_url.replace(':id', id)
+        if board:
+            endpoint_url += f'/{board}'
+        if region:
+            endpoint_url += f'/{region}'
+
+        return super().get(url=endpoint_url)
 
 
 class BackstoryAnswers(BaseAPIv2Object):
@@ -606,6 +634,14 @@ class Emotes(BaseAPIv2Object):
     pass
 
 
+class Events(BaseAPIv2Object):
+    pass
+
+
+class EventsState(BaseAPIv2Object):
+    pass
+
+
 class Files(BaseAPIv2Object):
     pass
 
@@ -1016,6 +1052,10 @@ class WvwRanks(BaseAPIv2Object):
     pass
 
 
+class WvwRewardTracks(BaseAPIv2Object):
+    pass
+
+
 class WvwUpgrades(BaseAPIv2Object):
     pass
 
@@ -1030,6 +1070,7 @@ API_OBJECTS = [Account('account'),
                AccountEmotes('account/emotes'),
                AccountFinishers('account/finishers'),
                AccountGliders('account/gliders'),
+               AccountHome('account/home'),
                AccountHomeCats('account/home/cats'),
                AccountHomeNodes('account/home/nodes'),
                AccountInventory('account/inventory'),
@@ -1058,6 +1099,9 @@ API_OBJECTS = [Account('account'),
                AchievementsDaily('achievements/daily'),
                AchievementsDailyTomorrow('achievements/daily/tomorrow'),
                AchievementsGroups('achievements/groups'),
+               Adventures('adventures'),
+               AdventuresLeaderboards('adventures/:id/leaderboards'),
+               AdventuresIdLeaderboards('adventures/:id/leaderboards/:board/:region'),
                BackstoryAnswers('backstory/answers'),
                BackstoryQuestions('backstory/questions'),
                Build('build'),
@@ -1097,6 +1141,8 @@ API_OBJECTS = [Account('account'),
                EmblemBackgrounds('emblem/backgrounds'),
                EmblemForegrounds('emblem/foregrounds'),
                Emotes('emotes'),
+               Events('events'),
+               EventsState('events-state'),
                Files('files'),
                Finishers('finishers'),
                GemstoreCatalog('gemstore/catalog'),
@@ -1163,8 +1209,7 @@ API_OBJECTS = [Account('account'),
                Vendors('vendors'),
                WorldBosses('worldbosses'),
                Worlds('worlds'),
-               WorldBosses('worldbosses'),
-               Wvw('wvw'),
+               Wvw('wvw'), 
                WvwAbilities('wvw/abilities'),
                WvwMatches('wvw/matches'),
                WvwMatchesOverview('wvw/matches/overview'),
@@ -1176,4 +1221,5 @@ API_OBJECTS = [Account('account'),
                WvwMatchesStatsTeamsTopKills('wvw/matches/stats/:id/teams/:team/top/kills'),
                WvwObjectives('wvw/objectives'),
                WvwRanks('wvw/ranks'),
+               WvwRewardTracks('wvw/rewardtracks'),
                WvwUpgrades('wvw/upgrades')]
